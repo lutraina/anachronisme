@@ -6,11 +6,12 @@
 -->
 <html>
 <head>
-    <title>Landed by HTML5 UP</title>
+    <title>{% block title %}Anachronisme{% endblock %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    {# the CSS file lives at "public/assets/css/main.css" #}
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <noscript><link rel="stylesheet" href="{{ asset('assets/css/noscript.css') }}" /></noscript>
 </head>
 <body class="is-preload landing">
 <div id="page-wrapper">
@@ -52,14 +53,14 @@
                 <p>And there are no hoverboards or flying cars.<br />
                     Just apps. Lots of mother flipping apps.</p>
             </header>
-            <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+            <span class="image"><img src="{{ asset('assets/images/pic01.jpg') }}" alt="" /></span>
         </div>
         <a href="#one" class="goto-next scrolly">Next</a>
     </section>
 
     <!-- One -->
     <section id="one" class="spotlight style1 bottom">
-        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+        <span class="image fit main"><img src="{{ asset('assets/images/pic02.jpg') }}" alt="" /></span>
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -91,7 +92,7 @@
 
     <!-- Two -->
     <section id="two" class="spotlight style2 right">
-        <span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+        <span class="image fit main"><img src="{{ asset('assets/images/pic03.jpg') }}" alt="" /></span>
         <div class="content">
             <header>
                 <h2>Interdum amet non magna accumsan</h2>
@@ -107,7 +108,7 @@
 
     <!-- Three -->
     <section id="three" class="spotlight style3 left">
-        <span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+        <span class="image fit main bottom"><img src="{{ asset('assets/images/pic04.jpg') }}" alt="" /></span>
         <div class="content">
             <header>
                 <h2>Interdum felis blandit praesent sed augue</h2>
@@ -204,14 +205,18 @@
 </div>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+{# the JS file lives at "public/bundles/acme/js/loader.js" #}
+
+
+
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dropotron.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ asset('assets/js/browser.min.js') }}"></script>
+<script src="{{ asset('assets/js/breakpoints.min.js') }}"></script>
+<script src="{{ asset('assets/js/util.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 </html>
